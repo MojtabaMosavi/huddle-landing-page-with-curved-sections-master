@@ -1,0 +1,44 @@
+* {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $Font-body;
+  font-size: 1rem;
+  max-width: 23.4375rem;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.flex {
+  display: flex;
+
+  &-js-c {
+    justify-content: center;
+  }
+  &-js-sb {
+    justify-content: space-between;
+  }
+
+  &-al-c {
+    align-items: center;
+  }
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

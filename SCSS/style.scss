@@ -1,0 +1,350 @@
+@import "variables";
+@import "globals";
+@import "typografi";
+
+.container {
+  margin: 1.4375rem;
+}
+
+.header {
+  &__logo {
+    max-width: 7rem;
+  }
+
+  &__btn {
+    padding: 0.4375rem 1.12rem 0.3125rem 1.12rem;
+    border: 1px solid $Pink;
+    color: $Pink;
+  }
+  &__btn:hover {
+    background-color: $Pink;
+    color: #fff;
+  }
+}
+
+.main {
+  .card-intro {
+    text-align: center;
+    margin-top: 8rem;
+
+    &__heading {
+      font-family: $Font-heading;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    &__text {
+      margin-bottom: 3rem;
+    }
+
+    &__image {
+      max-width: 100%;
+      margin-top: 6.3125rem;
+      margin-bottom: 5.75rem;
+    }
+
+    &__stats {
+      flex-direction: column;
+      background: url("../images/bg-section-top-mobile-1.svg") no-repeat bottom;
+      .stats {
+        margin-bottom: 5.75rem;
+        position: relative;
+
+        &__heading {
+          color: $Very-Dark-Cyan;
+          font-size: 4rem;
+          margin: 0;
+        }
+
+        &__image {
+          display: block;
+          margin-left: 4.5rem;
+          max-width: 1.9rem;
+        }
+        &__text {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .btn_trial {
+    padding: 1rem 1rem;
+    background-color: $Pink;
+    color: $Very-Pale-Blue;
+    max-width: 12rem;
+    margin: 0 auto;
+  }
+
+  .sign-up {
+    text-align: center;
+    background: url("../images/bg-section-bottom-mobile-2.svg") no-repeat 0 0;
+    margin-bottom: 10rem;
+
+    &__heading {
+      color: $Very-Dark-Cyan;
+      font-size: 1.5rem;
+      margin: 0 0 2.375rem 0;
+      padding: 8rem 0 0 0;
+      font-weight: 700;
+    }
+  }
+}
+
+.card {
+  flex-direction: column-reverse;
+  text-align: center;
+  color: $Very-Dark-Cyan;
+
+  &_bg1 {
+    background: url("../images/bg-section-bottom-mobile-1.svg") no-repeat,
+      url("../images/bg-section-top-mobile-2.svg") no-repeat bottom;
+  }
+
+  &_bg2 {
+    margin-bottom: 12rem;
+  }
+
+  &_bg {
+    background: $Very-Pale-Blue;
+  }
+  &__heading {
+    font-family: $Font-heading;
+    font-size: 1.2rem;
+  }
+  &__image {
+    max-width: 100%;
+    margin-bottom: 5rem;
+
+    &_bg1 {
+      margin-top: 8rem;
+    }
+  }
+}
+
+.footer {
+  background-color: $Very-Dark-Cyan;
+  position: relative;
+  color: #ffffff;
+  padding: 1.5rem;
+
+  &__logo {
+    color: #fff;
+    background-color: #fff;
+  }
+  &__info-text {
+    margin-bottom: 2.75rem;
+  }
+
+  &__info {
+    .info {
+      &__image {
+        margin-right: 1.125rem;
+      }
+
+      &_number,
+      &_email {
+        margin-bottom: 1.375rem;
+      }
+    }
+
+    .social-icons {
+      margin: 2.375rem 0;
+      &__item {
+        color: #fff;
+        font-size: 2rem;
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .newsletter {
+    margin-bottom: 6.25rem;
+    &__heading {
+      text-transform: uppercase;
+    }
+  }
+  .signup__email {
+    width: 100%;
+    height: 2.375rem;
+    max-width: 20rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .signup__email:focus {
+    outline: none;
+  }
+
+  .signup__btn {
+    background-color: $Pink;
+    max-width: 10rem;
+    margin-left: auto;
+    padding: 0.8rem 2.625rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform: translateY(-3.2rem);
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-footer-top-mobile.svg") no-repeat top;
+}
+
+@media screen and (min-width: 56.25em) {
+  body {
+    max-width: 90rem;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .header {
+    margin: 4rem 5rem 0 5rem;
+    &__logo {
+      max-width: 15rem;
+    }
+    &__btn {
+      padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    }
+  }
+
+  .main {
+    .card-intro {
+      &__heading {
+        font-size: 3rem;
+        margin: 0 10rem;
+      }
+
+      &__text {
+        font-size: 1.2rem;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__stats {
+        flex-direction: row;
+        justify-content: space-around;
+        background: url("../images/bg-section-top-desktop-1.svg") no-repeat
+          center bottom;
+        .stats {
+          margin-bottom: 16rem;
+          &__image {
+            max-width: 3rem;
+            margin-left: 0;
+          }
+          &__heading {
+            font-size: 5rem;
+          }
+        }
+      }
+    }
+
+    .sign-up {
+      background: url("../images/bg-section-bottom-desktop-2.svg") no-repeat top
+        center;
+      margin-bottom: 16rem;
+      &__heading {
+        font-size: 1.5rem;
+        padding: 14rem 0 0 0;
+      }
+    }
+
+    .card {
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      &_bg1 {
+        flex-direction: row-reverse;
+        background: url("../images/bg-section-bottom-desktop-1.svg") no-repeat,
+          url("../images/bg-section-top-desktop-2.svg") no-repeat bottom;
+      }
+
+      &__heading {
+        font-size: 2rem;
+        margin-top: 16rem;
+      }
+      &__image {
+        width: 50%;
+        max-width: 33rem;
+        max-height: 24rem;
+        &_bg1 {
+          margin-top: 16rem;
+          margin-bottom: 14rem;
+        }
+      }
+
+      &__content {
+        width: 50%;
+        padding: 7.5rem;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 5rem;
+
+    .newsletter {
+      max-width: 32.75rem;
+
+      &__heading {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+      &__text {
+        width: 64%;
+      }
+
+      .signup {
+        display: flex;
+        align-items: center;
+        max-height: 3.125rem;
+        margin: 2rem 0;
+
+        &__email {
+          height: 3.125rem;
+          margin-bottom: 0;
+        }
+
+        &__btn {
+          padding: 1rem 2.5rem;
+        }
+      }
+    }
+    &__info {
+      max-width: 22.5rem;
+    }
+
+    &__info-text {
+      width: 90%;
+    }
+  }
+  .footer::before {
+    transform: translateY(-9.3rem);
+    background: url("../images/bg-footer-top-desktop.svg") no-repeat top;
+  }
+}
+
+@media screen and (min-width: 68.75em) {
+  .main {
+    .card {
+      &__content {
+        padding: 3rem;
+      }
+    }
+  }
+}
